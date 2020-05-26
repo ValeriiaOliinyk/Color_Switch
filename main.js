@@ -38,9 +38,11 @@ function startHandler() {
   }
   intervalId = setInterval(changeColor, 1000);
   isActive = true;
+  refs.btnStart.setAttribute('disabled', '');
 }
 
 function stopHandler() {
   clearInterval(intervalId);
   isActive = false;
+  refs.btnStart.removeAttribute('disabled', '');
 }
